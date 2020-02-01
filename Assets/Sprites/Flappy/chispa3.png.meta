@@ -92,12 +92,12 @@ TextureImporter:
       name: chispa3_0
       rect:
         serializedVersion: 2
-        x: 500
-        y: 340
-        width: 196
-        height: 232
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        x: 0
+        y: 0
+        width: 148
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

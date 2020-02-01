@@ -41,18 +41,18 @@ public class ThirdPersonCamera : MonoBehaviour
     {
         x = Input.GetAxis("Horizontal");
         y = Input.GetAxis("Vertical");
-        currentX += (x * sensibilidadHorizontal);
+        currentX += (x * sensibilidadHorizontal) *-1;
         currentY += (y * sensibilidadVertical);
         currentY = Mathf.Clamp(currentY, yMinAngle, yMaxAngle);
         if(distance <= 3 )
         {
             distance = 3;
         }
-        if(distance >= 15)
+        if(distance >= 10)
         {
-            distance = 15;
+            distance = 10;
         }
-        distance = distance - (Input.GetAxis("Mouse ScrollWheel") * 2);
+        distance = distance - (Input.GetAxis("Mouse ScrollWheel") * 3);
         distancia = new Vector3(0, 0, -distance);
         Rotador();
     }
@@ -61,6 +61,7 @@ public class ThirdPersonCamera : MonoBehaviour
     {
         rotacionCamara = Quaternion.Euler(currentY - initialx, currentX + initialy, 0);
         transform.position = lookAt.position + rotacionCamara * distancia;
+
         transform.LookAt(lookAt);
     }
 }
