@@ -529,14 +529,14 @@ AnimationClip:
   m_HasGenericRootTransform: 1
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 1.45
+  - time: 4.75
     functionName: Image
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 1.5
+  - time: 4.8
     functionName: LoadA
     data: 
     objectReferenceParameter: {fileID: 0}
