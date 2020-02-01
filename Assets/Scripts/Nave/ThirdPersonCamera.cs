@@ -10,7 +10,7 @@ public class ThirdPersonCamera : MonoBehaviour
     public const float yMaxAngle = 65f;
     public float sensibilidadHorizontal = 1f;
     public float sensibilidadVertical = 1f;
-    public float distance = 10f;
+    float distance = 10f;
 
     float currentX;
     float currentY;
@@ -44,6 +44,16 @@ public class ThirdPersonCamera : MonoBehaviour
         currentX += (x * sensibilidadHorizontal);
         currentY += (y * sensibilidadVertical);
         currentY = Mathf.Clamp(currentY, yMinAngle, yMaxAngle);
+        if(distance <= 3 )
+        {
+            distance = 3;
+        }
+        if(distance >= 15)
+        {
+            distance = 15;
+        }
+        distance = distance - (Input.GetAxis("Mouse ScrollWheel") * 2);
+        distancia = new Vector3(0, 0, -distance);
         Rotador();
     }
 
