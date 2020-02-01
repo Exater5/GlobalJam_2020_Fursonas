@@ -4,15 +4,37 @@ using UnityEngine;
 
 public class ControlEngranajes : MonoBehaviour
 {
-    // Start is called before the first frame update
+   // List<Engranaje> engranajes = new List<Engranaje>();
+    int cantidadEngranajes;
+    Engranaje[] engranajes;
+    List<GameObject> gOEngranajes = new List<GameObject>();
+    public bool win = false;
     void Start()
     {
-        
+        engranajes = FindObjectsOfType<Engranaje>();
+        cantidadEngranajes = engranajes.Length;
+        for (int i = 0; i<cantidadEngranajes;i++)
+        {
+            gOEngranajes.Add(engranajes[i].gameObject);
+        }
     }
 
-    // Update is called once per frame
+
     void Update()
     {
-        
+        CheckWin();
+    }
+
+    private void CheckWin()
+    {
+        for (int i = 0; i < cantidadEngranajes; i++)
+        {
+            if (gOEngranajes[i].GetComponent<Engranaje>().rotacionCorrecta == false)
+            {
+                win = false;
+                break;
+            }
+            win = true;
+        }
     }
 }
