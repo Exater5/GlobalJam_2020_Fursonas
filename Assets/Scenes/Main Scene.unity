@@ -263,7 +263,7 @@ GameObject:
   - component: {fileID: 319142674}
   - component: {fileID: 319142673}
   m_Layer: 0
-  m_Name: FlappyCamera
+  m_Name: MinigamesCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
