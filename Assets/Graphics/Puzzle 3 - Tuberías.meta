@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Graphics/Puzzle 3 - Tuberías.meta
 guid: d7dd7a393df0f5f4582e31da088ca512
+=======
+guid: 30c215ff9c72b7b4e97f6f40102b9d53
+>>>>>>> f3f3246312452dd543ddcafc4f7844b92e69845a:Assets/Anim.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
