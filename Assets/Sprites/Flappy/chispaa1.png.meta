@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: cd784a335b2363d4281414a3e6e88454
+guid: 191f64467d03b8149b22b958177f1ed9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6654935822409649245
-    second: chispa3_0
+      213: 6415042929651816065
+    second: chispaa1_0
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -89,13 +89,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: chispa3_0
+      name: chispaa1_0
       rect:
         serializedVersion: 2
-        x: 500
-        y: 340
-        width: 196
-        height: 232
+        x: 0
+        y: 1
+        width: 220
+        height: 219
       alignment: 1
       pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -103,8 +103,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d5ccfb10fd41b5c50800000000000000
-      internalID: 6654935822409649245
+      spriteID: 18617c06e8fc60950800000000000000
+      internalID: 6415042929651816065
       vertices: []
       indices: 
       edges: []
@@ -112,7 +112,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 35ea5f759d83a164eb10a151159ef299
     internalID: 0
     vertices: []
     indices: 
