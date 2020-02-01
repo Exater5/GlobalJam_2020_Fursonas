@@ -6,24 +6,23 @@ public class Engranaje : MonoBehaviour
 {
     float _realRotation;
     public float velocidad;
-    bool _rotacionCorrecta = false;
+    public bool rotacionCorrecta = false;
     public Sprite encendido;
-    public int rotacionFinal;
+    public float rotacionFinal;
 
-    // Start is called before the first frame update
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
+        ComprobarRotacion();
+
         if (transform.root.eulerAngles.z!=_realRotation)
         {
             transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, 0, _realRotation),velocidad);
-        }
-        ComprobarRotacion();
+        }     
     }
 
     private void OnMouseDown()
@@ -31,7 +30,7 @@ public class Engranaje : MonoBehaviour
         RotateGear();
     }
 
-    public void RotateGear()
+    private void RotateGear()
     {
         _realRotation += 45;
         if(_realRotation == 360)
@@ -42,9 +41,9 @@ public class Engranaje : MonoBehaviour
 
     private void ComprobarRotacion()
     {
-        if (transform.rotation.z == rotacionFinal)
+        if (_realRotation == rotacionFinal)
         {
-            _rotacionCorrecta = true;
+            rotacionCorrecta = true;
             Debug.Log("Buena");
         }
     }
