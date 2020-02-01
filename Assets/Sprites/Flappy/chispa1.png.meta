@@ -1589,6 +1589,9 @@ TextureImporter:
   - first:
       213: -1076098345422870549
     second: chispa_528
+  - first:
+      213: 4848482114293967533
+    second: chispa1_0
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -1673,22 +1676,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: chispa_0
+      name: chispa1_0
       rect:
         serializedVersion: 2
-        x: 816
-        y: 412
-        width: 248
-        height: 248
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        x: 0
+        y: 0
+        width: 164
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 871a4d815c4ca72e0800000000000000
-      internalID: -2127171523174948488
+      spriteID: daaa35a6bc4494340800000000000000
+      internalID: 4848482114293967533
       vertices: []
       indices: 
       edges: []
