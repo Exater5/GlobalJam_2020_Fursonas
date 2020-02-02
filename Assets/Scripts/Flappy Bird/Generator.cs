@@ -12,7 +12,6 @@ public class Generator : MonoBehaviour
     void Start()
     {
         InvokeRepeating("Spawn", 0.0f, tiempoEntreSpawns);
-        //Player.onTerremotoReached += AplicarTerremoto;
     }
 
     void Spawn()
@@ -20,10 +19,4 @@ public class Generator : MonoBehaviour
         float Diferencia = Random.Range(-rangoAleatorio, rangoAleatorio);
         Instantiate(prefabObstaculo, transform.position + Diferencia * Vector3.up, Quaternion.identity);
     }
-
-    //void AplicarTerremoto()
-    //{
-        //CancelInvoke("Spawn");
-        //InvokeRepeating("Spawn", 0.0f, tiempoEntreSpawns * 0.6f);
-    //}
 }

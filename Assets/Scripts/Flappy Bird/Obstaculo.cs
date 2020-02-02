@@ -14,16 +14,10 @@ public class Obstaculo : MonoBehaviour
     {
         Destroy(gameObject, kamikaze);
         velocidad = velocidadInicial * 2.0f;
-        //Player.onTerremotoReached += AplicarTerremoto;
     }
 
     void Update()
     {
         transform.position = transform.position + Vector3.left * velocidadInicial * Time.deltaTime;
     }
-
-    //void AplicarTerremoto()
-    //{
-        //transform.position = transform.position + Vector3.left * velocidad * Time.deltaTime;
-    //}
 }

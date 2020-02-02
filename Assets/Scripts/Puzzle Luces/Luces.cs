@@ -7,9 +7,10 @@ public class Luces : MonoBehaviour
     int estadoLuz = 0;
     float retraso;
     GameObject guardaColores;
-    // Start is called before the first frame update
+
     void Start()
     {
+        retraso = Random.Range(1, 4);
         StartCoroutine(CambiarEstados(retraso));
         guardaColores = FindObjectOfType<GuardaSprites>().gameObject;
     }
@@ -40,12 +41,14 @@ public class Luces : MonoBehaviour
         {
             ControlLuces.puntos++;
             estadoLuz = 0;
+            GetComponent<SpriteRenderer>().sprite = guardaColores.GetComponent<GuardaSprites>().colores[0];
         }
 
         if (estadoLuz == 2)
         {
             ControlLuces.fallos--;
             estadoLuz = 0;
+            GetComponent<SpriteRenderer>().sprite = guardaColores.GetComponent<GuardaSprites>().colores[0];
         }
     }
 }
