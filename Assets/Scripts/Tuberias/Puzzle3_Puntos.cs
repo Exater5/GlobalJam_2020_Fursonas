@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class Puzzle3_Puntos : MonoBehaviour
 {
+    Puzzle3_GameManager _gm;
+
     public int dificultad;
     float tiempoTotal;
     float tiempoActual;
 
     void Start()
     {
+        _gm = GetComponent<Puzzle3_GameManager>();
+
         switch (dificultad)
         {
             case 1:
@@ -29,11 +33,16 @@ public class Puzzle3_Puntos : MonoBehaviour
                 break;
         }
 
-        //tiempoTotal;
+        tiempoTotal += Time.time;
     }
     
     void Update()
     {
-        
+        tiempoActual = Time.time;
+
+        if (tiempoActual >= tiempoTotal && !_gm.victoria)
+        {
+            Debug.Log("Has Perdido");
+        }
     }
 }
