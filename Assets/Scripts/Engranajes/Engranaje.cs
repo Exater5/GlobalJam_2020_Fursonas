@@ -55,7 +55,6 @@ public class Engranaje : MonoBehaviour
         if (_realRotation == rotacionFinal)
         {
             rotacionCorrecta = true;
-            Debug.Log("Buena");
         }
     }
 }
