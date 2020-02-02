@@ -49,4 +49,12 @@ public class GameController : MonoBehaviour
         yield return new WaitForSeconds(2f);
         SceneManager.LoadScene("Menu");
     }
+    public void Inicio()
+    {
+        SceneManager.LoadScene("Inicio");
+    }
+    public void Creditos()
+    {
+        SceneManager.LoadScene("Creditos");
+    }
 }
