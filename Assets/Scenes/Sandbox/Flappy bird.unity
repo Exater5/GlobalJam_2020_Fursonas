@@ -153,7 +153,7 @@ MonoBehaviour:
   tiempoEntreSpawns: 2
   prefabObstaculo: {fileID: 385392444810553192, guid: f0a3ec86277353742b84122bbab6fc7c,
     type: 3}
-  rangoAleatorio: 4.3
+  rangoAleatorio: 4
 --- !u!4 &128644260
 Transform:
   m_ObjectHideFlags: 0
