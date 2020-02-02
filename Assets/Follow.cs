@@ -4,12 +4,8 @@ using UnityEngine;
 
 public class Follow : MonoBehaviour
 {
-
     public GameObject target;
-    void Start()
-    {
-        
-    }
+
 
     // Update is called once per frame
     void Update()

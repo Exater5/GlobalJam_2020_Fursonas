@@ -35,6 +35,11 @@ public class Player : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         puntos++;
+        if(puntos >= 8)
+        {
+            FindObjectOfType<ThirdPersonCamera>().GetComponent<Camera>().enabled = true;
+            SceneManager.UnloadSceneAsync(SceneManager.GetSceneByName(GameController.escenaActual), UnloadSceneOptions.None);
+        }
         //textoPuntos.text = "Score: " + puntos.ToString();
         //emisorAudio.PlayOneShot(sonidoMoneda);
     }
@@ -42,6 +47,9 @@ public class Player : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         //emisorAudio.PlayOneShot(sonidoMuerte);
+        FindObjectOfType<ThirdPersonCamera>().GetComponent<Camera>().enabled = true;
+        SceneManager.UnloadSceneAsync(SceneManager.GetSceneByName(GameController.escenaActual), UnloadSceneOptions.None);
+        //DESTRUIRNAVE
         Destroy(gameObject);
         //gameOver.SetActive(true);
     }

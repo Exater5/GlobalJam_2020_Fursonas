@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ControlLuces : MonoBehaviour
 {
@@ -17,12 +18,15 @@ public class ControlLuces : MonoBehaviour
     {
         if (fallos <= 0)
         {
-
+            FindObjectOfType<ThirdPersonCamera>().GetComponent<Camera>().enabled = true;
+            SceneManager.UnloadSceneAsync(SceneManager.GetSceneByName(GameController.escenaActual), UnloadSceneOptions.None);
+            //Destruyenave
         }
 
         if (puntos >= puntosMax)
         {
-
+            FindObjectOfType<ThirdPersonCamera>().GetComponent<Camera>().enabled = true;
+            SceneManager.UnloadSceneAsync(SceneManager.GetSceneByName(GameController.escenaActual), UnloadSceneOptions.None);
         }
     }
 }

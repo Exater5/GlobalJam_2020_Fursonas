@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class Puzzle3_Puntos : MonoBehaviour
 {
     Puzzle3_GameManager _gm;
@@ -42,7 +42,14 @@ public class Puzzle3_Puntos : MonoBehaviour
 
         if (tiempoActual >= tiempoTotal && !_gm.victoria)
         {
-            Debug.Log("Has Perdido");
+            FindObjectOfType<ThirdPersonCamera>().GetComponent<Camera>().enabled = true;
+            SceneManager.UnloadSceneAsync(SceneManager.GetSceneByName(GameController.escenaActual), UnloadSceneOptions.None);
+            //DEStruir nave
+        }
+        if(tiempoActual < tiempoTotal && _gm.victoria)
+        {
+            FindObjectOfType<ThirdPersonCamera>().GetComponent<Camera>().enabled = true;
+            SceneManager.UnloadSceneAsync(SceneManager.GetSceneByName(GameController.escenaActual), UnloadSceneOptions.None);
         }
     }
 }

@@ -9,6 +9,7 @@ public class GameController : MonoBehaviour
     public Animator animMenuIngame;
     public Image botonPausa;
     public Sprite[] pausa;
+    public static string escenaActual;
     public void Pausa()
     {
         if (!pausado)

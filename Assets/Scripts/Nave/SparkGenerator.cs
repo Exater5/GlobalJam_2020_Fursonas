@@ -10,11 +10,11 @@ public class SparkGenerator : MonoBehaviour
     int randomIndex;
     int sparkRange = 0;
     float retraso;
-
+    public Transform puntoASeguir;
 
     void Start()
     {
-        retraso = 4;
+        retraso = 15;
         StartCoroutine(CreaRotura(retraso));
     }
 
@@ -35,7 +35,8 @@ public class SparkGenerator : MonoBehaviour
     {
         yield return new WaitForSeconds(retraso);
         sparkRange = UnityEngine.Random.Range(0,6);
-        spark = Instantiate(spark);
+        puntoASeguir = sparkPoint[sparkRange];
+        Instantiate(spark);
         spark.GetComponent<Follow>().target = sparkPoint[sparkRange].gameObject;
         retraso = 30;
         StartCoroutine(CreaRotura(retraso));
