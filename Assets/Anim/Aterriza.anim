@@ -1285,7 +1285,7 @@ AnimationClip:
   m_HasGenericRootTransform: 1
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 14.416667
+  - time: 11.4
     functionName: Explota
     data: 
     objectReferenceParameter: {fileID: 0}

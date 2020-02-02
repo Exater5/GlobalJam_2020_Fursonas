@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Puzzle Luces.unity
     guid: 3601e74f1e5c7564a9192d179c17518c
+  - enabled: 1
+    path: Assets/Scenes/Escena Final Mal.unity
+    guid: c9d1ea8b2e8e6da4180a67b71b07bda9
+  - enabled: 1
+    path: Assets/Scenes/Escena Final Bien.unity
+    guid: 98af517ec8ca4de4ebcee64ac3022f87
   m_configObjects: {}
