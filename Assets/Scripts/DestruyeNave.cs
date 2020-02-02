@@ -12,14 +12,15 @@ public class DestruyeNave : MonoBehaviour
         --vidas;
         if(vidas <= 0)
         {
-            StartCoroutine(Explota());
+            Explota();
         }
     }
-    IEnumerator Explota()
+    public void Explota()
     {
-        Instantiate(particulasExplosion, transform.position, Quaternion.identity);
-        FindObjectOfType<GameController>().GetComponent<GameController>().Activa();
-        yield return new WaitForSeconds(0.5f);
-        Destroy(gameObject);
+        SceneManager.LoadScene("Escena Final Mal");
+    }
+    public void Aterriza()
+    {
+        SceneManager.LoadScene("Escena Final Bien");
     }
 }
