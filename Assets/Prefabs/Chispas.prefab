@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 633623373607963}
   - component: {fileID: 633623373607972}
+  - component: {fileID: -6431262485236472639}
   m_Layer: 0
   m_Name: Chispas
   m_TagString: Untagged
@@ -43,8 +44,25 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.34930515, y: 0.25887203, z: 0.5811573}
-  m_Center: {x: -0.6637082, y: -0.068332195, z: -0.046057522}
+  m_Size: {x: 0.29690146, y: 0.32751554, z: 0.36124706}
+  m_Center: {x: -0.8364942, y: -0.30156052, z: -0.15601258}
+--- !u!114 &-6431262485236472639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 633623373607962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c813f9b8eadcfec49bd17dbce1c914f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minijuegos:
+  - m_Handle: 2
+  - m_Handle: 3
+  - m_Handle: 4
+  - m_Handle: 5
 --- !u!1 &633623504974651
 GameObject:
   m_ObjectHideFlags: 0

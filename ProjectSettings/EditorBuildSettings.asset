@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Scene.unity
     guid: d040abd01aa6db54ba2fd7c4d09e1a2c
   - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: f4e71806942319e46932a25b7b10c33e
+  - enabled: 1
     path: Assets/Scenes/Sandbox/Flappy bird.unity
     guid: 916ebc11a8e6a2144983918a3440c6c1
   m_configObjects: {}
