@@ -6,7 +6,7 @@ public class ThirdPersonCamera : MonoBehaviour
 {
     public Transform lookAt;
 
-    public const float yMinAngle = -10;
+    public const float yMinAngle = -50;
     public const float yMaxAngle = 65f;
     public float sensibilidadHorizontal = 1f;
     public float sensibilidadVertical = 1f;
@@ -41,9 +41,25 @@ public class ThirdPersonCamera : MonoBehaviour
     {
         x = Input.GetAxis("Horizontal");
         y = Input.GetAxis("Vertical");
-        currentX += (x * sensibilidadHorizontal) *-1;
-        currentY += (y * sensibilidadVertical);
-        currentY = Mathf.Clamp(currentY, yMinAngle, yMaxAngle);
+
+        if(x+y == 0)
+        {
+            /*
+            if (Input.GetMouseButton(1))
+            {
+                Vector2 mouse = new Vector2(Camera.main.ScreenToViewportPoint(Input.mousePosition).x, Camera.main.ScreenToViewportPoint(Input.mousePosition).y);
+                currentX += (mouse.x * sensibilidadHorizontal);
+                currentY += (mouse.y * sensibilidadVertical);
+                currentY = Mathf.Clamp(currentY, yMinAngle, yMaxAngle);
+            }
+            */
+        }
+        else
+        {
+            currentX += (x * sensibilidadHorizontal) * -1;
+            currentY += (y * sensibilidadVertical);
+            currentY = Mathf.Clamp(currentY, yMinAngle, yMaxAngle);
+        }
         if(distance <= 3 )
         {
             distance = 3;
