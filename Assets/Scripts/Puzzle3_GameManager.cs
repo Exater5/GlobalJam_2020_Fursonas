@@ -44,6 +44,7 @@ public class Puzzle3_GameManager : MonoBehaviour
         {
             p1 = index;
             piezasElegidas++;
+            puzzle.piezas[(int)p1.x][(int)p1.y].GetComponent<SpriteRenderer>();
         }
         else
         {
