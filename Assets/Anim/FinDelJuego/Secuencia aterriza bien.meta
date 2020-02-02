@@ -1,6 +1,10 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Scenes/Creditos.unity.meta
+guid: f15936cc1a592ef438262cabd83effdb
+=======
 guid: 4357bd7a8cf245d40b293c7485afda5c
 folderAsset: yes
+>>>>>>> 19ad9aa91a90ec8ba6a02eb9f19d84f18495d975:Assets/Anim/FinDelJuego/Secuencia aterriza bien.meta
 DefaultImporter:
   externalObjects: {}
   userData: 
