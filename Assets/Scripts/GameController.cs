@@ -24,10 +24,15 @@ public class GameController : MonoBehaviour
     }
     public void Reinicia()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Time.timeScale = 1;
+        SceneManager.LoadScene("Main Scene");
     }
     public void MenuPrincipal()
     {
-
+        SceneManager.LoadScene("Menu");
+    }
+    public void Salir()
+    {
+        Application.Quit();
     }
 }
