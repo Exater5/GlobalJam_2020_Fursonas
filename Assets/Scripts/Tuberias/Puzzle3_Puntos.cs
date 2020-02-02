@@ -6,6 +6,9 @@ public class Puzzle3_Puntos : MonoBehaviour
 {
     Puzzle3_GameManager _gm;
 
+    public Sprite pantallaSprite;
+    public GameObject pantalla;
+
     public int dificultad;
     float tiempoTotal;
     float tiempoActual;
@@ -41,13 +44,14 @@ public class Puzzle3_Puntos : MonoBehaviour
         tiempoActual = Time.time;
 
         if (tiempoActual >= tiempoTotal && !_gm.victoria)
-        {
+        {            
             FindObjectOfType<ThirdPersonCamera>().GetComponent<Camera>().enabled = true;
             SceneManager.UnloadSceneAsync(SceneManager.GetSceneByName(GameController.escenaActual), UnloadSceneOptions.None);
             FindObjectOfType<VueloNave>().GetComponent<DestruyeNave>().QuitaVidas();
         }
         if(tiempoActual < tiempoTotal && _gm.victoria)
         {
+            pantalla.GetComponent<SpriteRenderer>().sprite = pantallaSprite;
             FindObjectOfType<ThirdPersonCamera>().GetComponent<Camera>().enabled = true;
             SceneManager.UnloadSceneAsync(SceneManager.GetSceneByName(GameController.escenaActual), UnloadSceneOptions.None);
         }

@@ -19,21 +19,29 @@ public class Puzzle3_Pieza : MonoBehaviour
     
     [SerializeField]
     Vector2 index;
-    
-    public void SetIndex(Vector2 ind)
-    {
-        index = ind;
-    }
 
+    Color auxColor;
+    
     void Start()
     {
         _gm = GameObject.FindGameObjectWithTag("GameController").GetComponent<Puzzle3_GameManager>();
+        auxColor = gameObject.GetComponent<SpriteRenderer>().color;
     }
 
     void Update()
     {
         if (transform.root.eulerAngles.z != rotacionReal)
             transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, 0, rotacionReal), velocidad);
+
+        if (_estaActiva && _gm.victoria)
+            gameObject.GetComponent<SpriteRenderer>().color = Color.cyan;
+        if (!_estaActiva)
+            gameObject.GetComponent<SpriteRenderer>().color = auxColor;
+    }
+
+    public void SetIndex(Vector2 ind)
+    {
+        index = ind;
     }
 
     private void OnMouseDown()
