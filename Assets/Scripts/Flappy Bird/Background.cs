@@ -5,18 +5,16 @@ using UnityEngine.Animations;
 
 public class Background : MonoBehaviour
 {
-
     public float velocidad = 1f;
-    Material miMaterial;
+    SpriteRenderer _sp;
 
     void Start()
     {
-        miMaterial = GetComponent<Renderer>().material;   
+        _sp = GetComponent<SpriteRenderer>();   
     }
 
     void Update()
     {
-        miMaterial.mainTextureOffset = miMaterial.mainTextureOffset + Vector2.right * velocidad * Time.deltaTime;
+        _sp.size += (Vector2.right * velocidad * Time.deltaTime);
     }
-
 }

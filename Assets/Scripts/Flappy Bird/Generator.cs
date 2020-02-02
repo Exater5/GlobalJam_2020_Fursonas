@@ -8,7 +8,6 @@ public class Generator : MonoBehaviour
     public GameObject prefabObstaculo;
     public float rangoAleatorio;
 
-
     void Start()
     {
         InvokeRepeating("Spawn", 0.0f, tiempoEntreSpawns);

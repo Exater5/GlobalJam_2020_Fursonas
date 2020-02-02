@@ -8,7 +8,7 @@ using System;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Player : MonoBehaviour
 {
-    public float jumpForce = 3.0f;
+    public float jumpForce;
     public static int puntos = 0;
     Rigidbody2D miRigidboby;
     //public Text textoPuntos;
@@ -25,7 +25,7 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) || Input.touches.Length == 1 && Input.touches[0].phase == TouchPhase.Began)
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
         {
             miRigidboby.velocity = Vector2.up * jumpForce;
             //emisorAudio.PlayOneShot(sonidoSalto);

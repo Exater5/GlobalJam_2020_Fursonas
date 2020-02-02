@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class Obstaculo : MonoBehaviour
 {
-
     public float velocidadInicial = 1.0f;
     float velocidad = 1.0f;
     public float kamikaze = 1.0f;
-
-
-    private void Start()
+    
+    void Start()
     {
         Destroy(gameObject, kamikaze);
         velocidad = velocidadInicial * 2.0f;
