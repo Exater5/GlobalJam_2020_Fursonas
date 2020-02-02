@@ -12,7 +12,7 @@ public class Engranaje : MonoBehaviour
 
     void Start()
     {
-        
+        GirarPiezas();
     }
 
     void Update()
@@ -37,6 +37,16 @@ public class Engranaje : MonoBehaviour
         {
             _realRotation = 0;
         }
+    }
+
+    void GirarPiezas()
+    {
+            int rotaciones = Random.Range(0, 8);
+
+            for (int i = 0; i < rotaciones; i++)
+            {
+                RotateGear();
+            }
     }
 
     private void ComprobarRotacion()
