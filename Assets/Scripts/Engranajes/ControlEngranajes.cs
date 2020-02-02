@@ -10,6 +10,8 @@ public class ControlEngranajes : MonoBehaviour
     List<GameObject> gOEngranajes = new List<GameObject>();
     public Sprite[] encendido;
     public bool win = false;
+    public Sprite numEncendido;
+    public GameObject pantallaTeclado;
     void Start()
     {
         engranajes = FindObjectsOfType<Engranaje>();
@@ -40,6 +42,7 @@ public class ControlEngranajes : MonoBehaviour
             {
                 gOEngranajes[j].GetComponent<SpriteRenderer>().sprite = encendido[j];
             }
+            pantallaTeclado.GetComponent<SpriteRenderer>().sprite = numEncendido;
         }
         }
     }
