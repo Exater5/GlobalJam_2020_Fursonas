@@ -18,7 +18,7 @@ public class Luces : MonoBehaviour
     IEnumerator CambiarEstados(float retraso)
     {
         yield return new WaitForSeconds(retraso);
-        estadoLuz = Random.Range(0,3);
+        estadoLuz = Random.Range(0, 3);
         switch (estadoLuz)
         {
             case 0:
@@ -31,12 +31,21 @@ public class Luces : MonoBehaviour
                 GetComponent<SpriteRenderer>().sprite = guardaColores.GetComponent<GuardaSprites>().colores[2];
                 break;
         }
-        retraso = Random.Range(1,4);
+        retraso = Random.Range(1, 4);
         StartCoroutine(CambiarEstados(retraso));
     }
-    
     private void OnMouseDown()
     {
-        
+        if (estadoLuz == 1)
+        {
+            ControlLuces.puntos++;
+            estadoLuz = 0;
+        }
+
+        if (estadoLuz == 2)
+        {
+            ControlLuces.fallos--;
+            estadoLuz = 0;
+        }
     }
 }

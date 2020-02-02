@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class ControlLuces : MonoBehaviour
 {
-    static int puntos = 0;
-    static int fallos = 0;
+    public static int puntos = 0;
+    public int puntosMax = 2;
+    public static int fallos = 2;
     void Start()
     {
         
@@ -14,6 +15,14 @@ public class ControlLuces : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (fallos <= 0)
+        {
+
+        }
+
+        if (puntos >= puntosMax)
+        {
+
+        }
     }
 }
