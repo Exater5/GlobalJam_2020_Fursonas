@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 633623373607963}
-  - component: {fileID: 633623373607972}
   - component: {fileID: -6431262485236472639}
+  - component: {fileID: 1698713859}
   m_Layer: 0
   m_Name: Chispas
   m_TagString: Untagged
@@ -25,27 +25,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 633623373607962}
-  m_LocalRotation: {x: -0, y: -0, z: 0.30529135, w: 0.95225894}
+  m_LocalRotation: {x: 0, y: 0, z: 0.3052881, w: 0.9522601}
   m_LocalPosition: {x: 0.6664372, y: 2.8333535, z: 1.040919}
-  m_LocalScale: {x: 1.4755694, y: 1.3980238, z: 1.4357501}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children:
   - {fileID: 633623504974532}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &633623373607972
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 633623373607962}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.29690146, y: 0.32751554, z: 0.36124706}
-  m_Center: {x: -0.8364942, y: -0.30156052, z: -0.15601258}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 35.551003}
 --- !u!114 &-6431262485236472639
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59,10 +46,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minijuegos:
-  - m_Handle: 2
-  - m_Handle: 3
-  - m_Handle: 4
-  - m_Handle: 5
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  spawnMJ: {fileID: 0}
+--- !u!135 &1698713859
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 633623373607962}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &633623504974651
 GameObject:
   m_ObjectHideFlags: 0
@@ -89,8 +90,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 633623504974651}
   m_LocalRotation: {x: 0.39203408, y: -0.000000037252903, z: 0.00000017881393, w: 0.9199508}
-  m_LocalPosition: {x: -0.7961426, y: -0.33444405, z: -0.26530993}
-  m_LocalScale: {x: 0.27564996, y: 0.27188155, z: 0.2795201}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 633623373607963}
   m_RootOrder: 0
