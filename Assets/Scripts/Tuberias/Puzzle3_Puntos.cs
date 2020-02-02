@@ -44,7 +44,7 @@ public class Puzzle3_Puntos : MonoBehaviour
         {
             FindObjectOfType<ThirdPersonCamera>().GetComponent<Camera>().enabled = true;
             SceneManager.UnloadSceneAsync(SceneManager.GetSceneByName(GameController.escenaActual), UnloadSceneOptions.None);
-            //DEStruir nave
+            FindObjectOfType<VueloNave>().GetComponent<DestruyeNave>().QuitaVidas();
         }
         if(tiempoActual < tiempoTotal && _gm.victoria)
         {

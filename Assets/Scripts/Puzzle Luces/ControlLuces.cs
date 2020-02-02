@@ -20,7 +20,7 @@ public class ControlLuces : MonoBehaviour
         {
             FindObjectOfType<ThirdPersonCamera>().GetComponent<Camera>().enabled = true;
             SceneManager.UnloadSceneAsync(SceneManager.GetSceneByName(GameController.escenaActual), UnloadSceneOptions.None);
-            //Destruyenave
+            FindObjectOfType<VueloNave>().GetComponent<DestruyeNave>().QuitaVidas();
         }
 
         if (puntos >= puntosMax)

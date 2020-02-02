@@ -18,18 +18,13 @@ public class SparkGenerator : MonoBehaviour
         StartCoroutine(CreaRotura(retraso));
     }
 
-    
-
-    // Update is called once per frame
     void Update()
     {
-
+        if(Time.time > 155)
+        {
+            StopCoroutine(CreaRotura(0));
+        }
     }
-
-    //void randomSpark()
-    //{
-    //    GameObject instantiatedObject = Instantiate(sparkPoint[randomIndex], spark.transform.position, Quaternion.identity) as GameObject;
-    //}
 
     IEnumerator CreaRotura(float retraso)
     {

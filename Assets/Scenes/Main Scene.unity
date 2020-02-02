@@ -2111,6 +2111,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1664651737}
   m_CullTransparentMesh: 0
+--- !u!1 &1706720673 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3414953712321501410, guid: 1a1a29e087c5e0f44b139eb402f17195,
+    type: 3}
+  m_PrefabInstance: {fileID: 6648922016772611184}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1706720674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1706720673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb0e0eeb752553c40a8b162e6b126bb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vidas: 2
+  particulasExplosion: {fileID: 3649669645722093273, guid: acb0add88f3f32b4db166894bb69d567,
+    type: 3}
 --- !u!1 &1761049499 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 204129128754784189, guid: c02c94473ad57664f9806d8283d133ab,
