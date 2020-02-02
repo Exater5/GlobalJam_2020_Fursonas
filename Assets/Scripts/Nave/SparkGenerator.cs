@@ -34,9 +34,9 @@ public class SparkGenerator : MonoBehaviour
     IEnumerator CreaRotura(float retraso)
     {
         yield return new WaitForSeconds(retraso);
-        sparkRange =randomIndex;
-        spark = Instantiate(spark, sparkPoint[sparkRange].position, Quaternion.identity);
-        spark.transform.SetParent(sparkPoint[sparkRange]);
+        sparkRange = UnityEngine.Random.Range(0,6);
+        spark = Instantiate(spark);
+        spark.GetComponent<Follow>().target = sparkPoint[sparkRange].gameObject;
         retraso = 30;
         StartCoroutine(CreaRotura(retraso));
     }
