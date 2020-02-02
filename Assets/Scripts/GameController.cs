@@ -40,4 +40,13 @@ public class GameController : MonoBehaviour
     {
         Application.Quit();
     }
+    public void Activa()
+    {
+        StartCoroutine(Destruye());
+    }
+    public IEnumerator Destruye()
+    {
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene("Menu");
+    }
 }

@@ -20,7 +20,7 @@ public class VueloNave : MonoBehaviour
         }
     }
 
-/*
+
     void Update()
     {
         if (transform.position.y < 1800)
@@ -32,7 +32,7 @@ public class VueloNave : MonoBehaviour
             Time.timeScale = 1;
         }
     }
-    */
+    
         public void Despega()
     {
         volando = true;
