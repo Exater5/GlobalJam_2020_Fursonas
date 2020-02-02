@@ -14,11 +14,6 @@ public class Player : MonoBehaviour
     //public Text textoPuntos;
     //public GameObject gameOver;
     //AudioSource emisorAudio;
-    //public AudioClip sonidoSalto;
-    //public AudioClip sonidoMoneda;
-    //public AudioClip sonidoMuerte;
-    //public static Action onTerremotoReached;
-
 
     void Start()
     {
@@ -42,21 +37,10 @@ public class Player : MonoBehaviour
         puntos++;
         //textoPuntos.text = "Score: " + puntos.ToString();
         //emisorAudio.PlayOneShot(sonidoMoneda);
-
-        //if (puntos == 20)
-        //{
-          //  onTerremotoReached.Invoke();
-        //}
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-
-        //if (puntos > PlayerPrefs.GetInt("highscore"))
-        //{
-        //PlayerPrefs.SetInt("highscore", puntos);
-        //}
-
         //emisorAudio.PlayOneShot(sonidoMuerte);
         Destroy(gameObject);
         //gameOver.SetActive(true);

@@ -8,25 +8,15 @@ public class Background : MonoBehaviour
 
     public float velocidad = 1f;
     Material miMaterial;
-    //Animator myAnim;
 
-    // Use this for initialization
     void Start()
     {
-        miMaterial = GetComponent<Renderer>().material;
-        //myAnim = GetComponent<Animator>();
-        //Player.onTerremotoReached += AplicarTerremoto;
+        miMaterial = GetComponent<Renderer>().material;   
     }
 
-    // Update is called once per frame
     void Update()
     {
         miMaterial.mainTextureOffset = miMaterial.mainTextureOffset + Vector2.right * velocidad * Time.deltaTime;
     }
 
-    //void AplicarTerremoto()
-    //{
-        //myAnim.enabled = true;
-        //velocidad = velocidad * 2;
-    //}
 }

@@ -8,6 +8,7 @@ public class ControlEngranajes : MonoBehaviour
     int cantidadEngranajes;
     Engranaje[] engranajes;
     List<GameObject> gOEngranajes = new List<GameObject>();
+    public Sprite[] encendido;
     public bool win = false;
     void Start()
     {
@@ -35,6 +36,11 @@ public class ControlEngranajes : MonoBehaviour
                 break;
             }
             win = true;
+            for (int j = 0; j < cantidadEngranajes; j++)
+            {
+                gOEngranajes[j].GetComponent<SpriteRenderer>().sprite = encendido[j];
+            }
+        }
         }
     }
-}
+

@@ -12,6 +12,7 @@ public class Engranaje : MonoBehaviour
 
     void Start()
     {
+
         GirarPiezas();
     }
 
