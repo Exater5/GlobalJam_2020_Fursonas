@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ControlEngranajes : MonoBehaviour
 {
-   // List<Engranaje> engranajes = new List<Engranaje>();
     int cantidadEngranajes;
     Engranaje[] engranajes;
     List<GameObject> gOEngranajes = new List<GameObject>();
@@ -16,7 +15,7 @@ public class ControlEngranajes : MonoBehaviour
     {
         engranajes = FindObjectsOfType<Engranaje>();
         cantidadEngranajes = engranajes.Length;
-        for (int i = 0; i<cantidadEngranajes;i++)
+        for (int i = 0; i < cantidadEngranajes; i++)
         {
             gOEngranajes.Add(engranajes[i].gameObject);
         }
@@ -38,12 +37,12 @@ public class ControlEngranajes : MonoBehaviour
                 break;
             }
             win = true;
+            pantallaTeclado.GetComponent<SpriteRenderer>().sprite = numEncendido;
             for (int j = 0; j < cantidadEngranajes; j++)
             {
                 gOEngranajes[j].GetComponent<SpriteRenderer>().sprite = encendido[j];
             }
-            pantallaTeclado.GetComponent<SpriteRenderer>().sprite = numEncendido;
-        }
         }
     }
+}
 
