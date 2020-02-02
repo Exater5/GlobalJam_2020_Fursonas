@@ -7,7 +7,7 @@ public class SparkGenerator : MonoBehaviour
 {
     public Transform[] sparkPoint;
     public GameObject spark;
-    int randomIndex = UnityEngine.Random.Range(0, 6);
+    int randomIndex;
     int sparkRange = 0;
     int tiempoEspera;
     float retraso;
@@ -16,6 +16,7 @@ public class SparkGenerator : MonoBehaviour
     void Start()
     {
         retraso = 4;
+        randomIndex = UnityEngine.Random.Range(0, 6);
         StartCoroutine(CambiarEstados(retraso));
     }
 
