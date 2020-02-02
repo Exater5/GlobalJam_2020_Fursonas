@@ -44,10 +44,11 @@ public class Puzzle3_GameManager : MonoBehaviour
         {
             p1 = index;
             piezasElegidas++;
-            puzzle.piezas[(int)p1.x][(int)p1.y].GetComponent<SpriteRenderer>();
+            puzzle.piezas[(int)p1.x][(int)p1.y].GetComponent<SpriteRenderer>().sprite = puzzle.piezas[(int)p1.x][(int)p1.y].piezaSeleccionada;
         }
         else
         {
+            puzzle.piezas[(int)p1.x][(int)p1.y].GetComponent<SpriteRenderer>().sprite = puzzle.piezas[(int)p1.x][(int)p1.y].piezaOriginal;
             p2 = index;
             CambiarPieza();
             piezasElegidas = 0;

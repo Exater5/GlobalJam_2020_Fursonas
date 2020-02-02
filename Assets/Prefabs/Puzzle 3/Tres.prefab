@@ -95,6 +95,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abd110497262923468c1c6c56b7d56da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  piezaOriginal: {fileID: 21300000, guid: 96008ad75203b704e8d9f9e7a524fbb7, type: 3}
+  piezaSeleccionada: {fileID: 21300000, guid: cae76cf35b122f84b97c06d226dca26a, type: 3}
   valores: 01000000010000000000000001000000
   _esInicio: 0
   _estaActiva: 0
