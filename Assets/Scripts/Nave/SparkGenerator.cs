@@ -9,15 +9,13 @@ public class SparkGenerator : MonoBehaviour
     public GameObject spark;
     int randomIndex;
     int sparkRange = 0;
-    int tiempoEspera;
     float retraso;
 
 
     void Start()
     {
         retraso = 4;
-        randomIndex = UnityEngine.Random.Range(0, 6);
-        StartCoroutine(CambiarEstados(retraso));
+        StartCoroutine(CreaRotura(retraso));
     }
 
     
@@ -33,14 +31,14 @@ public class SparkGenerator : MonoBehaviour
     //    GameObject instantiatedObject = Instantiate(sparkPoint[randomIndex], spark.transform.position, Quaternion.identity) as GameObject;
     //}
 
-    IEnumerator CambiarEstados(float retraso)
+    IEnumerator CreaRotura(float retraso)
     {
         yield return new WaitForSeconds(retraso);
         sparkRange =randomIndex;
         spark = Instantiate(spark, sparkPoint[sparkRange].position, Quaternion.identity);
         spark.transform.SetParent(sparkPoint[sparkRange]);
-        tiempoEspera = 2;
-        StartCoroutine(CambiarEstados(retraso));
+        retraso = 30;
+        StartCoroutine(CreaRotura(retraso));
     }
 
 }

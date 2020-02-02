@@ -6,6 +6,9 @@ public class Puzzle3_Pieza : MonoBehaviour
 {
     Puzzle3_GameManager _gm;
 
+    public Sprite piezaOriginal;
+    public Sprite piezaSeleccionada;
+
     public int[] valores;
 
     float rotacionReal;
@@ -13,9 +16,7 @@ public class Puzzle3_Pieza : MonoBehaviour
 
     public bool _esInicio = false;
     public bool _estaActiva = false;
-
-    Color auxColor;
-
+    
     [SerializeField]
     Vector2 index;
     
@@ -27,18 +28,12 @@ public class Puzzle3_Pieza : MonoBehaviour
     void Start()
     {
         _gm = GameObject.FindGameObjectWithTag("GameController").GetComponent<Puzzle3_GameManager>();
-        auxColor = gameObject.GetComponent<SpriteRenderer>().color;
     }
 
     void Update()
     {
         if (transform.root.eulerAngles.z != rotacionReal)
             transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, 0, rotacionReal), velocidad);
-
-        if (_estaActiva)
-            gameObject.GetComponent<SpriteRenderer>().color = Color.green;
-        if (!_estaActiva)
-            gameObject.GetComponent<SpriteRenderer>().color = auxColor;
     }
 
     private void OnMouseDown()

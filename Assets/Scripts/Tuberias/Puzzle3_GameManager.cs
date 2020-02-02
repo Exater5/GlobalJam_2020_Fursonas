@@ -19,6 +19,7 @@ public class Puzzle3_GameManager : MonoBehaviour
     public GameObject inicio;
     public GameObject final;
 
+    public Transform tableroParent;
     public Transform inicioPos;
     public Transform finalPos;
 
@@ -36,7 +37,7 @@ public class Puzzle3_GameManager : MonoBehaviour
     [SerializeField]
     Vector2 p1, p2;
 
-    bool victoria = false;
+    public bool victoria = false;
 
     public void ElegirPieza(Vector2 index)
     {
@@ -44,10 +45,11 @@ public class Puzzle3_GameManager : MonoBehaviour
         {
             p1 = index;
             piezasElegidas++;
-            puzzle.piezas[(int)p1.x][(int)p1.y].GetComponent<SpriteRenderer>();
+            puzzle.piezas[(int)p1.x][(int)p1.y].GetComponent<SpriteRenderer>().sprite = puzzle.piezas[(int)p1.x][(int)p1.y].piezaSeleccionada;
         }
         else
         {
+            puzzle.piezas[(int)p1.x][(int)p1.y].GetComponent<SpriteRenderer>().sprite = puzzle.piezas[(int)p1.x][(int)p1.y].piezaOriginal;
             p2 = index;
             CambiarPieza();
             piezasElegidas = 0;
@@ -81,7 +83,7 @@ public class Puzzle3_GameManager : MonoBehaviour
             puzzle.piezas.Add(new List<Puzzle3_Pieza>());
             for(int j=0; j< columns; j++)
             {
-                GameObject pieza = Instantiate(tuberias[Random.Range(0,tuberias.Length)], new Vector3(j, i, 0), Quaternion.identity);
+                GameObject pieza = Instantiate(tuberias[Random.Range(0,tuberias.Length)], new Vector3(j, i, 0), Quaternion.identity, tableroParent);
                 pieza.GetComponent<Puzzle3_Pieza>().SetIndex(new Vector2(i,j));
                 puzzle.piezas[i].Add(pieza.GetComponent<Puzzle3_Pieza>());
             }

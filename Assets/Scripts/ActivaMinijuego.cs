@@ -1,15 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+
 public class ActivaMinijuego : MonoBehaviour
 {
-    public Scene[] minijuegos;
-
+    public GameObject[] minijuegos;
+    public Transform spawnMJ;
     private void OnMouseDown()
     {
-        int randomScene = Random.Range(2, 6);
-        SceneManager.MergeScenes(minijuegos[randomScene], SceneManager.GetActiveScene());
+        print("HOLA");
+        int randomJuego = Random.Range(2, 6);
+        Instantiate(minijuegos[randomJuego], spawnMJ.position, Quaternion.identity);
+        Camera.main.enabled = false;
         Destroy(gameObject);
     }
 }
